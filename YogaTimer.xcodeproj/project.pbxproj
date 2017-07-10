@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5AFFDB271F1398FA0089DBD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFDB261F1398FA0089DBD0 /* AppDelegate.swift */; };
+		5AFFDB291F1398FA0089DBD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFDB281F1398FA0089DBD0 /* ViewController.swift */; };
+		5AFFDB2C1F1398FA0089DBD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFFDB2A1F1398FA0089DBD0 /* Main.storyboard */; };
+		5AFFDB2E1F1398FA0089DBD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFFDB2D1F1398FA0089DBD0 /* Assets.xcassets */; };
+		5AFFDB311F1398FA0089DBD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFFDB2F1F1398FA0089DBD0 /* LaunchScreen.storyboard */; };
+		5AFFDB3C1F1398FB0089DBD0 /* YogaTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFDB3B1F1398FB0089DBD0 /* YogaTimerTests.swift */; };
+		5AFFDB471F1398FB0089DBD0 /* YogaTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFDB461F1398FB0089DBD0 /* YogaTimerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AFFDB381F1398FB0089DBD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AFFDB1B1F1398FA0089DBD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AFFDB221F1398FA0089DBD0;
+			remoteInfo = YogaTimer;
+		};
+		5AFFDB431F1398FB0089DBD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AFFDB1B1F1398FA0089DBD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AFFDB221F1398FA0089DBD0;
+			remoteInfo = YogaTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5AFFDB231F1398FA0089DBD0 /* YogaTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YogaTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFFDB261F1398FA0089DBD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5AFFDB281F1398FA0089DBD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5AFFDB2B1F1398FA0089DBD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5AFFDB2D1F1398FA0089DBD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5AFFDB301F1398FA0089DBD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5AFFDB321F1398FA0089DBD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AFFDB371F1398FB0089DBD0 /* YogaTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YogaTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFFDB3B1F1398FB0089DBD0 /* YogaTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaTimerTests.swift; sourceTree = "<group>"; };
+		5AFFDB3D1F1398FB0089DBD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AFFDB421F1398FB0089DBD0 /* YogaTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YogaTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFFDB461F1398FB0089DBD0 /* YogaTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaTimerUITests.swift; sourceTree = "<group>"; };
+		5AFFDB481F1398FB0089DBD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AFFDB201F1398FA0089DBD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFFDB341F1398FB0089DBD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFFDB3F1F1398FB0089DBD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AFFDB1A1F1398FA0089DBD0 = {
+			isa = PBXGroup;
+			children = (
+				5AFFDB251F1398FA0089DBD0 /* YogaTimer */,
+				5AFFDB3A1F1398FB0089DBD0 /* YogaTimerTests */,
+				5AFFDB451F1398FB0089DBD0 /* YogaTimerUITests */,
+				5AFFDB241F1398FA0089DBD0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AFFDB241F1398FA0089DBD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AFFDB231F1398FA0089DBD0 /* YogaTimer.app */,
+				5AFFDB371F1398FB0089DBD0 /* YogaTimerTests.xctest */,
+				5AFFDB421F1398FB0089DBD0 /* YogaTimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AFFDB251F1398FA0089DBD0 /* YogaTimer */ = {
+			isa = PBXGroup;
+			children = (
+				5AFFDB261F1398FA0089DBD0 /* AppDelegate.swift */,
+				5AFFDB281F1398FA0089DBD0 /* ViewController.swift */,
+				5AFFDB2A1F1398FA0089DBD0 /* Main.storyboard */,
+				5AFFDB2D1F1398FA0089DBD0 /* Assets.xcassets */,
+				5AFFDB2F1F1398FA0089DBD0 /* LaunchScreen.storyboard */,
+				5AFFDB321F1398FA0089DBD0 /* Info.plist */,
+			);
+			path = YogaTimer;
+			sourceTree = "<group>";
+		};
+		5AFFDB3A1F1398FB0089DBD0 /* YogaTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AFFDB3B1F1398FB0089DBD0 /* YogaTimerTests.swift */,
+				5AFFDB3D1F1398FB0089DBD0 /* Info.plist */,
+			);
+			path = YogaTimerTests;
+			sourceTree = "<group>";
+		};
+		5AFFDB451F1398FB0089DBD0 /* YogaTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5AFFDB461F1398FB0089DBD0 /* YogaTimerUITests.swift */,
+				5AFFDB481F1398FB0089DBD0 /* Info.plist */,
+			);
+			path = YogaTimerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AFFDB221F1398FA0089DBD0 /* YogaTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AFFDB4B1F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimer" */;
+			buildPhases = (
+				5AFFDB1F1F1398FA0089DBD0 /* Sources */,
+				5AFFDB201F1398FA0089DBD0 /* Frameworks */,
+				5AFFDB211F1398FA0089DBD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YogaTimer;
+			productName = YogaTimer;
+			productReference = 5AFFDB231F1398FA0089DBD0 /* YogaTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5AFFDB361F1398FB0089DBD0 /* YogaTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AFFDB4E1F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimerTests" */;
+			buildPhases = (
+				5AFFDB331F1398FB0089DBD0 /* Sources */,
+				5AFFDB341F1398FB0089DBD0 /* Frameworks */,
+				5AFFDB351F1398FB0089DBD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AFFDB391F1398FB0089DBD0 /* PBXTargetDependency */,
+			);
+			name = YogaTimerTests;
+			productName = YogaTimerTests;
+			productReference = 5AFFDB371F1398FB0089DBD0 /* YogaTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5AFFDB411F1398FB0089DBD0 /* YogaTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AFFDB511F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimerUITests" */;
+			buildPhases = (
+				5AFFDB3E1F1398FB0089DBD0 /* Sources */,
+				5AFFDB3F1F1398FB0089DBD0 /* Frameworks */,
+				5AFFDB401F1398FB0089DBD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AFFDB441F1398FB0089DBD0 /* PBXTargetDependency */,
+			);
+			name = YogaTimerUITests;
+			productName = YogaTimerUITests;
+			productReference = 5AFFDB421F1398FB0089DBD0 /* YogaTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AFFDB1B1F1398FA0089DBD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Sushrut Shringarputale";
+				TargetAttributes = {
+					5AFFDB221F1398FA0089DBD0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8Y3KZTG6X4;
+						ProvisioningStyle = Automatic;
+					};
+					5AFFDB361F1398FB0089DBD0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8Y3KZTG6X4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5AFFDB221F1398FA0089DBD0;
+					};
+					5AFFDB411F1398FB0089DBD0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8Y3KZTG6X4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5AFFDB221F1398FA0089DBD0;
+					};
+				};
+			};
+			buildConfigurationList = 5AFFDB1E1F1398FA0089DBD0 /* Build configuration list for PBXProject "YogaTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5AFFDB1A1F1398FA0089DBD0;
+			productRefGroup = 5AFFDB241F1398FA0089DBD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AFFDB221F1398FA0089DBD0 /* YogaTimer */,
+				5AFFDB361F1398FB0089DBD0 /* YogaTimerTests */,
+				5AFFDB411F1398FB0089DBD0 /* YogaTimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AFFDB211F1398FA0089DBD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFFDB311F1398FA0089DBD0 /* LaunchScreen.storyboard in Resources */,
+				5AFFDB2E1F1398FA0089DBD0 /* Assets.xcassets in Resources */,
+				5AFFDB2C1F1398FA0089DBD0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFFDB351F1398FB0089DBD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFFDB401F1398FB0089DBD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AFFDB1F1F1398FA0089DBD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFFDB291F1398FA0089DBD0 /* ViewController.swift in Sources */,
+				5AFFDB271F1398FA0089DBD0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFFDB331F1398FB0089DBD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFFDB3C1F1398FB0089DBD0 /* YogaTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFFDB3E1F1398FB0089DBD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFFDB471F1398FB0089DBD0 /* YogaTimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AFFDB391F1398FB0089DBD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AFFDB221F1398FA0089DBD0 /* YogaTimer */;
+			targetProxy = 5AFFDB381F1398FB0089DBD0 /* PBXContainerItemProxy */;
+		};
+		5AFFDB441F1398FB0089DBD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AFFDB221F1398FA0089DBD0 /* YogaTimer */;
+			targetProxy = 5AFFDB431F1398FB0089DBD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5AFFDB2A1F1398FA0089DBD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AFFDB2B1F1398FA0089DBD0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5AFFDB2F1F1398FA0089DBD0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AFFDB301F1398FA0089DBD0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5AFFDB491F1398FB0089DBD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5AFFDB4A1F1398FB0089DBD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AFFDB4C1F1398FB0089DBD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8Y3KZTG6X4;
+				INFOPLIST_FILE = YogaTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.sushshring.YogaTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5AFFDB4D1F1398FB0089DBD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8Y3KZTG6X4;
+				INFOPLIST_FILE = YogaTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.sushshring.YogaTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		5AFFDB4F1F1398FB0089DBD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8Y3KZTG6X4;
+				INFOPLIST_FILE = YogaTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.sushshring.YogaTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YogaTimer.app/YogaTimer";
+			};
+			name = Debug;
+		};
+		5AFFDB501F1398FB0089DBD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8Y3KZTG6X4;
+				INFOPLIST_FILE = YogaTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.sushshring.YogaTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YogaTimer.app/YogaTimer";
+			};
+			name = Release;
+		};
+		5AFFDB521F1398FB0089DBD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8Y3KZTG6X4;
+				INFOPLIST_FILE = YogaTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.sushshring.YogaTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = YogaTimer;
+			};
+			name = Debug;
+		};
+		5AFFDB531F1398FB0089DBD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8Y3KZTG6X4;
+				INFOPLIST_FILE = YogaTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.sushshring.YogaTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = YogaTimer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AFFDB1E1F1398FA0089DBD0 /* Build configuration list for PBXProject "YogaTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFFDB491F1398FB0089DBD0 /* Debug */,
+				5AFFDB4A1F1398FB0089DBD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AFFDB4B1F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFFDB4C1F1398FB0089DBD0 /* Debug */,
+				5AFFDB4D1F1398FB0089DBD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5AFFDB4E1F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFFDB4F1F1398FB0089DBD0 /* Debug */,
+				5AFFDB501F1398FB0089DBD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5AFFDB511F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFFDB521F1398FB0089DBD0 /* Debug */,
+				5AFFDB531F1398FB0089DBD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AFFDB1B1F1398FA0089DBD0 /* Project object */;
+}
