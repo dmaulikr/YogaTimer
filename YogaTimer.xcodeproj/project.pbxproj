@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		5AFFDB271F1398FA0089DBD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFDB261F1398FA0089DBD0 /* AppDelegate.swift */; };
 		5AFFDB291F1398FA0089DBD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFDB281F1398FA0089DBD0 /* ViewController.swift */; };
-		5AFFDB2C1F1398FA0089DBD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFFDB2A1F1398FA0089DBD0 /* Main.storyboard */; };
+		5AFFDB2C1F1398FA0089DBD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFFDB2A1F1398FA0089DBD0 /* Main.storyboard */; settings = {ASSET_TAGS = (yogaFiller, ); }; };
 		5AFFDB2E1F1398FA0089DBD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFFDB2D1F1398FA0089DBD0 /* Assets.xcassets */; };
 		5AFFDB311F1398FA0089DBD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFFDB2F1F1398FA0089DBD0 /* LaunchScreen.storyboard */; };
 		5AFFDB3C1F1398FB0089DBD0 /* YogaTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFDB3B1F1398FB0089DBD0 /* YogaTimerTests.swift */; };
 		5AFFDB471F1398FB0089DBD0 /* YogaTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFDB461F1398FB0089DBD0 /* YogaTimerUITests.swift */; };
+		7C837E246EACDB40FF9A4539 /* Pods_YogaTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C24EC0B0E2AF85A2888CE73 /* Pods_YogaTimer.framework */; };
+		BFB7B052C3DBAA13F740B13E /* Pods_YogaTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC463B4DE5DD9D3B70E4EC6A /* Pods_YogaTimerTests.framework */; };
+		D71E7F9C28BF40B679892039 /* Pods_YogaTimerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CFCE5C381FB4A81F70BEC /* Pods_YogaTimerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		105ACC48ED09A036178AC944 /* Pods-YogaTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaTimerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YogaTimerTests/Pods-YogaTimerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5AFFDB231F1398FA0089DBD0 /* YogaTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YogaTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFFDB261F1398FA0089DBD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AFFDB281F1398FA0089DBD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		5AFFDB421F1398FB0089DBD0 /* YogaTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YogaTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFFDB461F1398FB0089DBD0 /* YogaTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaTimerUITests.swift; sourceTree = "<group>"; };
 		5AFFDB481F1398FB0089DBD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80A1AAC590AFC3F144A28BFF /* Pods-YogaTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-YogaTimer/Pods-YogaTimer.release.xcconfig"; sourceTree = "<group>"; };
+		8C24EC0B0E2AF85A2888CE73 /* Pods_YogaTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YogaTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C92EA8B9171A747A4D54A5E /* Pods-YogaTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaTimerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YogaTimerTests/Pods-YogaTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6563F8F25EE1EA1DF8039EE /* Pods-YogaTimerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaTimerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YogaTimerUITests/Pods-YogaTimerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BA2CFCE5C381FB4A81F70BEC /* Pods_YogaTimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YogaTimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC463B4DE5DD9D3B70E4EC6A /* Pods_YogaTimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YogaTimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E58B5BEBD09C182BF6B3E930 /* Pods-YogaTimerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaTimerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YogaTimerUITests/Pods-YogaTimerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9C7539785A821ED10DFD683 /* Pods-YogaTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YogaTimer/Pods-YogaTimer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C837E246EACDB40FF9A4539 /* Pods_YogaTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB7B052C3DBAA13F740B13E /* Pods_YogaTimerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71E7F9C28BF40B679892039 /* Pods_YogaTimerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0362BB14087F2322C16B9BB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C24EC0B0E2AF85A2888CE73 /* Pods_YogaTimer.framework */,
+				BC463B4DE5DD9D3B70E4EC6A /* Pods_YogaTimerTests.framework */,
+				BA2CFCE5C381FB4A81F70BEC /* Pods_YogaTimerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58BE6EE21C4BA4AEFB6993D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9C7539785A821ED10DFD683 /* Pods-YogaTimer.debug.xcconfig */,
+				80A1AAC590AFC3F144A28BFF /* Pods-YogaTimer.release.xcconfig */,
+				9C92EA8B9171A747A4D54A5E /* Pods-YogaTimerTests.debug.xcconfig */,
+				105ACC48ED09A036178AC944 /* Pods-YogaTimerTests.release.xcconfig */,
+				E58B5BEBD09C182BF6B3E930 /* Pods-YogaTimerUITests.debug.xcconfig */,
+				B6563F8F25EE1EA1DF8039EE /* Pods-YogaTimerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5AFFDB1A1F1398FA0089DBD0 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				5AFFDB3A1F1398FB0089DBD0 /* YogaTimerTests */,
 				5AFFDB451F1398FB0089DBD0 /* YogaTimerUITests */,
 				5AFFDB241F1398FA0089DBD0 /* Products */,
+				58BE6EE21C4BA4AEFB6993D5 /* Pods */,
+				0362BB14087F2322C16B9BB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AFFDB4B1F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimer" */;
 			buildPhases = (
+				6A0E54522BE2309A7D180BE8 /* [CP] Check Pods Manifest.lock */,
 				5AFFDB1F1F1398FA0089DBD0 /* Sources */,
 				5AFFDB201F1398FA0089DBD0 /* Frameworks */,
 				5AFFDB211F1398FA0089DBD0 /* Resources */,
+				BF9DAC730052814863BF6C53 /* [CP] Embed Pods Frameworks */,
+				A15837C6A6529C4D5A2F3E82 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AFFDB4E1F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimerTests" */;
 			buildPhases = (
+				1F33AE65B27509EF9BECD6FA /* [CP] Check Pods Manifest.lock */,
 				5AFFDB331F1398FB0089DBD0 /* Sources */,
 				5AFFDB341F1398FB0089DBD0 /* Frameworks */,
 				5AFFDB351F1398FB0089DBD0 /* Resources */,
+				20B7E98761ED136DE2729D01 /* [CP] Embed Pods Frameworks */,
+				224E60E9D4CEC49A04819F49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AFFDB511F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimerUITests" */;
 			buildPhases = (
+				95E375BA3858A74E61933D8F /* [CP] Check Pods Manifest.lock */,
 				5AFFDB3E1F1398FB0089DBD0 /* Sources */,
 				5AFFDB3F1F1398FB0089DBD0 /* Frameworks */,
 				5AFFDB401F1398FB0089DBD0 /* Resources */,
+				88526DE60FDB64BB4C7FD828 /* [CP] Embed Pods Frameworks */,
+				1397878AD3E3067EB4831EF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +236,9 @@
 		5AFFDB1B1F1398FA0089DBD0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					yogaFiller,
+				);
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Sushrut Shringarputale";
@@ -256,6 +308,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1397878AD3E3067EB4831EF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YogaTimerUITests/Pods-YogaTimerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F33AE65B27509EF9BECD6FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		20B7E98761ED136DE2729D01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YogaTimerTests/Pods-YogaTimerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		224E60E9D4CEC49A04819F49 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YogaTimerTests/Pods-YogaTimerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A0E54522BE2309A7D180BE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		88526DE60FDB64BB4C7FD828 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YogaTimerUITests/Pods-YogaTimerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95E375BA3858A74E61933D8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A15837C6A6529C4D5A2F3E82 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YogaTimer/Pods-YogaTimer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF9DAC730052814863BF6C53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YogaTimer/Pods-YogaTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5AFFDB1F1F1398FA0089DBD0 /* Sources */ = {
@@ -415,6 +605,7 @@
 		};
 		5AFFDB4C1F1398FB0089DBD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9C7539785A821ED10DFD683 /* Pods-YogaTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8Y3KZTG6X4;
@@ -428,6 +619,7 @@
 		};
 		5AFFDB4D1F1398FB0089DBD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80A1AAC590AFC3F144A28BFF /* Pods-YogaTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8Y3KZTG6X4;
@@ -441,6 +633,7 @@
 		};
 		5AFFDB4F1F1398FB0089DBD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C92EA8B9171A747A4D54A5E /* Pods-YogaTimerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +649,7 @@
 		};
 		5AFFDB501F1398FB0089DBD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 105ACC48ED09A036178AC944 /* Pods-YogaTimerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +665,7 @@
 		};
 		5AFFDB521F1398FB0089DBD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E58B5BEBD09C182BF6B3E930 /* Pods-YogaTimerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8Y3KZTG6X4;
@@ -485,6 +680,7 @@
 		};
 		5AFFDB531F1398FB0089DBD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6563F8F25EE1EA1DF8039EE /* Pods-YogaTimerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8Y3KZTG6X4;
@@ -516,6 +712,7 @@
 				5AFFDB4D1F1398FB0089DBD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AFFDB4E1F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +721,7 @@
 				5AFFDB501F1398FB0089DBD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AFFDB511F1398FB0089DBD0 /* Build configuration list for PBXNativeTarget "YogaTimerUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +730,7 @@
 				5AFFDB531F1398FB0089DBD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
