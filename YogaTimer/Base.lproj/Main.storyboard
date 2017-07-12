@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Yoga Timer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YogaTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Yoga Timer" id="BYZ-38-t0r" customClass="ViewController" customModule="YogaTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,12 +22,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABo-4d-vhb">
-                                <rect key="frame" x="112" y="49" width="152" height="49"/>
+                                <rect key="frame" x="98" y="49" width="162" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="TEW-Md-jAy"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="YogaTimer">
+                                    <fragment content="Yoga Timer">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.98761208071468831" blue="0.98526990128534042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
@@ -39,9 +39,20 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUW-X7-a0Z" customClass="MBCircularProgressBarView">
                                 <rect key="frame" x="68" y="148" width="240" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7Z-xa-I2S">
+                                        <rect key="frame" x="106" y="92" width="28" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="48"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="080-zO-5Ug"/>
+                                    <constraint firstItem="v7Z-xa-I2S" firstAttribute="centerY" secondItem="oUW-X7-a0Z" secondAttribute="centerY" id="N2J-Cp-ojt"/>
+                                    <constraint firstItem="v7Z-xa-I2S" firstAttribute="centerX" secondItem="oUW-X7-a0Z" secondAttribute="centerX" id="qL6-8t-uJ9"/>
                                     <constraint firstAttribute="height" constant="240" id="yyQ-Bl-wni"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -66,10 +77,10 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                        <real key="value" value="114"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progressRotationAngle">
-                                        <real key="value" value="-169"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
                                         <real key="value" value="15"/>
@@ -80,23 +91,88 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="emptyLineStrokeColor">
                                         <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressCapType">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="T9d-c8-YdQ" appends="YES" id="Yg6-O5-vwV"/>
+                                    <outletCollection property="gestureRecognizers" destination="aAa-Bs-Vij" appends="YES" id="FFF-MS-QHe"/>
+                                </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ah2-z9-fcZ" customClass="MDCButton">
+                                <rect key="frame" x="137.5" y="408" width="100" height="50"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BYs-MU-7MN"/>
+                                    <constraint firstAttribute="height" constant="50" id="SAc-Bz-6h8"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="reset" destination="BYZ-38-t0r" eventType="valueChanged" id="whh-co-B6e"/>
+                                </connections>
+                            </view>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="1" minimumValue="0.10000000000000001" maximumValue="10" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-Qg-Y5r">
+                                <rect key="frame" x="141" y="547" width="94" height="29"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="stepperValueEventWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="slg-JE-lCp"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer Step" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-Oe-epY">
+                                <rect key="frame" x="146" y="482" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iV5-AE-80n">
+                                <rect key="frame" x="166" y="518" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="oUW-X7-a0Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0m8-wk-WId"/>
+                            <constraint firstItem="jwh-Qg-Y5r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="41J-nj-ebW"/>
                             <constraint firstItem="ABo-4d-vhb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5EA-Au-SH2"/>
+                            <constraint firstItem="Ah2-z9-fcZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5v8-o6-PnM"/>
                             <constraint firstItem="oUW-X7-a0Z" firstAttribute="top" secondItem="ABo-4d-vhb" secondAttribute="bottom" constant="50" id="6lR-6A-dVn"/>
+                            <constraint firstItem="jwh-Qg-Y5r" firstAttribute="top" secondItem="iV5-AE-80n" secondAttribute="bottom" constant="25" id="H7T-9x-7rf"/>
+                            <constraint firstItem="iV5-AE-80n" firstAttribute="top" secondItem="0Rv-Oe-epY" secondAttribute="bottom" constant="25" id="Kz0-Du-CYt"/>
                             <constraint firstItem="ABo-4d-vhb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="MF4-aO-HPw"/>
+                            <constraint firstItem="Ah2-z9-fcZ" firstAttribute="top" secondItem="oUW-X7-a0Z" secondAttribute="bottom" constant="50" id="MeW-Dy-VYk"/>
+                            <constraint firstItem="iV5-AE-80n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Or4-Z8-TAM"/>
+                            <constraint firstItem="0Rv-Oe-epY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PTH-2w-ob8"/>
+                            <constraint firstItem="0Rv-Oe-epY" firstAttribute="top" secondItem="Ah2-z9-fcZ" secondAttribute="bottom" constant="25" id="n0A-VE-ycG"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="maxTimerValueLabel" destination="v7Z-xa-I2S" id="ehK-nZ-3a9"/>
+                        <outlet property="resetButton" destination="Ah2-z9-fcZ" id="yVs-bA-eMf"/>
+                        <outlet property="speedLabel" destination="iV5-AE-80n" id="Itb-NZ-nkc"/>
+                        <outlet property="speedStepper" destination="jwh-Qg-Y5r" id="4G4-7S-tZE"/>
+                        <outlet property="yogaFiller" destination="oUW-X7-a0Z" id="VSf-di-SIz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="T9d-c8-YdQ">
+                    <connections>
+                        <action selector="updateTimerValue:" destination="BYZ-38-t0r" id="l3u-hb-GTa"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="aAa-Bs-Vij">
+                    <connections>
+                        <action selector="start:" destination="BYZ-38-t0r" id="76t-sn-GaF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
