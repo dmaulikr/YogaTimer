@@ -7,12 +7,12 @@
 //
 import UIKit
 import MaterialComponents.MaterialButtons
-import MBCircularProgressBar
+import MaterialComponents.MDCActivityIndicator
 import AVFoundation
 import Atomic
 
 class ViewController: UIViewController {
-    @IBOutlet weak var yogaFiller : MBCircularProgressBarView!
+    @IBOutlet weak var yogaFiller : MDCActivityIndicator!
     @IBOutlet weak var resetButton : MDCRaisedButton!
     @IBOutlet weak var maxTimerValueLabel: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
@@ -34,16 +34,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        yogaFiller.value = 0
+        
+        yogaFiller.cycleColors = [buttonColor, UIColor.darkGray]
+        yogaFiller.strokeWidth = 3.0
+        yogaFiller.setIndicatorMode(.determinate, animated: true)
+        yogaFiller.trackEnabled = true
+        yogaFiller.radius = yogaFiller.frame.width / 2
         
         resetButton.setTitle("Reset", for: .normal)
         resetButton.setBackgroundColor(buttonColor, for: .normal)
         resetButton.setTitleColor(UIColor.white, for: .normal)
         resetButton.sizeToFit()
         resetButton.addTarget(self, action: #selector(ViewController.reset), for: .touchUpInside)
-        
-        
-        maxTimerValueLabel.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -55,57 +57,54 @@ class ViewController: UIViewController {
     private var currentPanValue : CGFloat = 0
     @IBAction func updateTimerValue(_ panGestureRecognizer : UIPanGestureRecognizer) {
         if panGestureRecognizer.state == .began || panGestureRecognizer.state == .changed {
-            yogaFiller.showValueString = false
-            maxTimerValueLabel.isHidden = false
             currentPanValue += panGestureRecognizer.velocity(in: yogaFiller).y
-            maxCountValue = (currentPanValue * -0.005).rounded(.down)
+            maxCountValue = fabs((currentPanValue * -0.005).rounded(.down))
             print(maxCountValue)
-            maxTimerValueLabel.text = (Int(currentPanValue * -0.005)).description
-            yogaFiller.maxValue = maxCountValue
+            maxTimerValueLabel.text = (Int(fabs(currentPanValue * -0.005))).description
         }
         if panGestureRecognizer.state == .ended {
-            maxTimerValueLabel.isHidden = true
-            yogaFiller.showValueString = true
+            maxTimerValueLabel.text = 0.description
             currentPanValue = 0
         }
     }
     
     func reset () {
         print("Reset clicked")
+        timer?.invalidate()
         currentTimerValue = 0
-        yogaFiller.value = 0
-        yogaFiller.maxValue = 0
         maxCountValue = 0
         timerRunningState.value = false
     }
     
     func partialReset() {
         currentTimerValue = 0
-        yogaFiller.value = 0
         timerRunningState.value = false
+        yogaFiller.progress = 0
     }
     
     @IBAction func start(_ sender: UITapGestureRecognizer) {
         print("Start clicked")
+        yogaFiller.startAnimating()
         if (!timerRunningState.value) {
             timerRunningState.value = true
             timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(speed), repeats: true, block: { (Timer) in
                 self.animate.value = false
                 if (self.currentTimerValue < self.maxCountValue) {
                     self.currentTimerValue += 1
-                    self.yogaFiller.value = self.currentTimerValue
+                    self.maxTimerValueLabel.text = Int(self.currentTimerValue).description
+                    self.yogaFiller.progress = Float(self.currentTimerValue / self.maxCountValue)
                     let utterance = AVSpeechUtterance.init(string: Int(self.currentTimerValue).description)
-                    utterance.rate = (Float(self.speed > 1 ? CGFloat.init(0.5) : CGFloat.init(0.5) + (CGFloat.init(1.0)-(self.speed/2))))
-                    print(utterance.rate)
+                    utterance.rate = (Float(self.speed >= 1 ? CGFloat.init(0.5) : CGFloat.init(0.5) + (CGFloat.init(1.0)-(self.speed/2))))
                     self.AVSpeaker.speak(utterance)
                 } else {
+                    self.yogaFiller.stopAnimating()
                     self.timer?.invalidate()
                     self.partialReset()
                 }
             })
             timer!.fireDate = Date.init(timeInterval: 4, since: Date.init())
             self.animate.value = true
-            animateButton(start: self.animate.value)
+            animateLoading(start: self.animate)
         } else {
             timer?.invalidate()
             timerRunningState.value = false;
@@ -113,18 +112,14 @@ class ViewController: UIViewController {
     }
     
     
-    func animateButton(start : Bool) -> Void {
-        if (start) {
-            UIView.animate(withDuration: 1, animations: {
-                self.maxTimerValueLabel.isHidden = false
-                self.yogaFiller.showValueString = false
-                self.maxTimerValueLabel.transform = CGAffineTransform.init(rotationAngle: 360)
+    func animateLoading(start : Atomic<Bool>) -> Void {
+        if (start.value) {
+            yogaFiller.progress = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
+                // Put your code which should be executed with a delay here
+                self.yogaFiller.progress = Float(self.currentTimerValue / self.maxCountValue)
+                self.animateLoading(start: self.animate)
             })
-            animateButton(start: self.animate.value)
-        } else {
-            self.maxTimerValueLabel.isHidden = true
-            self.yogaFiller.showValueString = true
-
         }
     }
     
