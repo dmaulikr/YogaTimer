@@ -11,18 +11,16 @@ import MaterialComponents.MDCActivityIndicator
 import AVFoundation
 import Atomic
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SpeedSetDelegate {
     @IBOutlet weak var yogaFiller : MDCActivityIndicator!
     @IBOutlet weak var resetButton : MDCRaisedButton!
     @IBOutlet weak var maxTimerValueLabel: UILabel!
-    @IBOutlet weak var speedLabel: UILabel!
-    @IBOutlet weak var speedStepper: UIStepper!
+    
     
     
     let buttonColor : UIColor = UIColor.init(red: 0xF4/0xFF, green: 0x43/0xFF, blue: 0x36/0xFF, alpha: 0xFF/0xFF)
     
     private let timerRunningState = Atomic<Bool>(false)
-    private let animate = Atomic<Bool>(true)
     
     var currentTimerValue : CGFloat = 0
     var maxCountValue : CGFloat = 0
@@ -56,13 +54,12 @@ class ViewController: UIViewController {
     
     private var currentPanValue : CGFloat = 0
     @IBAction func updateTimerValue(_ panGestureRecognizer : UIPanGestureRecognizer) {
-        if panGestureRecognizer.state == .began || panGestureRecognizer.state == .changed {
+        if panGestureRecognizer.state == .began || panGestureRecognizer.state == .changed && currentTimerValue == 0 {
             currentPanValue += panGestureRecognizer.velocity(in: yogaFiller).y
             maxCountValue = fabs((currentPanValue * -0.005).rounded(.down))
-            print(maxCountValue)
             maxTimerValueLabel.text = (Int(fabs(currentPanValue * -0.005))).description
         }
-        if panGestureRecognizer.state == .ended {
+        if panGestureRecognizer.state == .ended && currentTimerValue == 0{
             maxTimerValueLabel.text = 0.description
             currentPanValue = 0
         }
@@ -73,6 +70,9 @@ class ViewController: UIViewController {
         timer?.invalidate()
         currentTimerValue = 0
         maxCountValue = 0
+        maxTimerValueLabel.text = 0.description
+        yogaFiller.progress = 0
+        yogaFiller.isAnimating = false
         timerRunningState.value = false
     }
     
@@ -85,10 +85,9 @@ class ViewController: UIViewController {
     @IBAction func start(_ sender: UITapGestureRecognizer) {
         print("Start clicked")
         yogaFiller.startAnimating()
-        if (!timerRunningState.value) {
-            timerRunningState.value = true
+        yogaFiller.progress = Float(currentTimerValue / self.maxCountValue)
+        if (!timerRunningState.swap(newValue: true)) {
             timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(speed), repeats: true, block: { (Timer) in
-                self.animate.value = false
                 if (self.currentTimerValue < self.maxCountValue) {
                     self.currentTimerValue += 1
                     self.maxTimerValueLabel.text = Int(self.currentTimerValue).description
@@ -102,30 +101,32 @@ class ViewController: UIViewController {
                     self.partialReset()
                 }
             })
-            timer!.fireDate = Date.init(timeInterval: 4, since: Date.init())
-            self.animate.value = true
-            animateLoading(start: self.animate)
+            animateLoading()
+            timer!.fireDate = Date.init(timeInterval: 2.5, since: .init())
         } else {
             timer?.invalidate()
             timerRunningState.value = false;
         }
     }
     
+    func setNewSpeed(speed: CGFloat) {
+        self.speed = speed
+    }
     
-    func animateLoading(start : Atomic<Bool>) -> Void {
-        if (start.value) {
-            yogaFiller.progress = 1
-            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
-                // Put your code which should be executed with a delay here
-                self.yogaFiller.progress = Float(self.currentTimerValue / self.maxCountValue)
-                self.animateLoading(start: self.animate)
-            })
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier! == "setTimerSpeed") {
+            let timerSetVC = segue.destination as! TimerStepViewController
+            timerSetVC.speed = self.speed
+            timerSetVC.speedSetDelegate = self
         }
     }
     
-    @IBAction func stepperValueEvent(sender: UIStepper) {
-        speedLabel.text = speedStepper.value.description
-        speed = CGFloat(speedStepper.value)
+    func animateLoading() {
+        yogaFiller.progress = 1.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
+            // Put your code which should be executed with a delay here
+            self.yogaFiller.progress = Float(self.currentTimerValue / self.maxCountValue)
+        })
     }
 }
 

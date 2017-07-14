@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QY5-Qa-LnD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,27 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="94" width="375" height="573"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABo-4d-vhb">
-                                <rect key="frame" x="106.5" y="49" width="162" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="TEW-Md-jAy"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Yoga Timer">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.98761208071468831" blue="0.98526990128534042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="35" name="HelveticaNeue-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUW-X7-a0Z" customClass="MDCActivityIndicator">
-                                <rect key="frame" x="68" y="148" width="240" height="240"/>
+                                <rect key="frame" x="68" y="25" width="240" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7Z-xa-I2S">
                                         <rect key="frame" x="106" y="92" width="28" height="57.5"/>
@@ -62,7 +46,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ah2-z9-fcZ" customClass="MDCButton">
-                                <rect key="frame" x="137.5" y="438" width="100" height="50"/>
+                                <rect key="frame" x="137.5" y="315" width="100" height="50"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES"/>
@@ -75,52 +59,32 @@
                                     <action selector="reset" destination="BYZ-38-t0r" eventType="valueChanged" id="whh-co-B6e"/>
                                 </connections>
                             </view>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="1" minimumValue="0.10000000000000001" maximumValue="10" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-Qg-Y5r">
-                                <rect key="frame" x="141" y="605" width="94" height="29"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="stepperValueEventWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="slg-JE-lCp"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer Step" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-Oe-epY">
-                                <rect key="frame" x="146" y="513" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iV5-AE-80n">
-                                <rect key="frame" x="183.5" y="559" width="7.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="oUW-X7-a0Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0m8-wk-WId"/>
-                            <constraint firstItem="jwh-Qg-Y5r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="41J-nj-ebW"/>
-                            <constraint firstItem="ABo-4d-vhb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5EA-Au-SH2"/>
                             <constraint firstItem="Ah2-z9-fcZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5v8-o6-PnM"/>
-                            <constraint firstItem="oUW-X7-a0Z" firstAttribute="top" secondItem="ABo-4d-vhb" secondAttribute="bottom" constant="50" id="6lR-6A-dVn"/>
-                            <constraint firstItem="jwh-Qg-Y5r" firstAttribute="top" secondItem="iV5-AE-80n" secondAttribute="bottom" constant="25" id="H7T-9x-7rf"/>
-                            <constraint firstItem="iV5-AE-80n" firstAttribute="top" secondItem="0Rv-Oe-epY" secondAttribute="bottom" constant="25" id="Kz0-Du-CYt"/>
-                            <constraint firstItem="ABo-4d-vhb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="MF4-aO-HPw"/>
                             <constraint firstItem="Ah2-z9-fcZ" firstAttribute="top" secondItem="oUW-X7-a0Z" secondAttribute="bottom" constant="50" id="MeW-Dy-VYk"/>
-                            <constraint firstItem="iV5-AE-80n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Or4-Z8-TAM"/>
-                            <constraint firstItem="0Rv-Oe-epY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PTH-2w-ob8"/>
-                            <constraint firstItem="0Rv-Oe-epY" firstAttribute="top" secondItem="Ah2-z9-fcZ" secondAttribute="bottom" constant="25" id="n0A-VE-ycG"/>
+                            <constraint firstItem="oUW-X7-a0Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="s60-wv-Mop"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hlh-2x-Cs6">
+                        <barButtonItem key="rightBarButtonItem" image="TimerStep" id="Gi3-fq-AXL" userLabel="Timer Step">
+                            <connections>
+                                <action selector="setTimerSpeed:" destination="BYZ-38-t0r" id="g9y-8n-8s6"/>
+                                <segue destination="Hg6-Pa-DJm" kind="presentation" identifier="setTimerSpeed" modalPresentationStyle="overCurrentContext" id="hag-hD-mnv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="maxTimerValueLabel" destination="v7Z-xa-I2S" id="ehK-nZ-3a9"/>
                         <outlet property="resetButton" destination="Ah2-z9-fcZ" id="yVs-bA-eMf"/>
-                        <outlet property="speedLabel" destination="iV5-AE-80n" id="Itb-NZ-nkc"/>
-                        <outlet property="speedStepper" destination="jwh-Qg-Y5r" id="4G4-7S-tZE"/>
                         <outlet property="yogaFiller" destination="oUW-X7-a0Z" id="VSf-di-SIz"/>
                     </connections>
                 </viewController>
@@ -136,7 +100,90 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Timer Step-->
+        <scene sceneID="YS9-f3-Nxk">
+            <objects>
+                <viewController title="Timer Step" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="Hg6-Pa-DJm" customClass="TimerStepViewController" customModule="YogaTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vYS-NR-Vbg"/>
+                        <viewControllerLayoutGuide type="bottom" id="b2v-G8-O02"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="q19-MP-Pag">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="1" minimumValue="0.10000000000000001" maximumValue="10" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-Qg-Y5r">
+                                <rect key="frame" x="140" y="291" width="94" height="29"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="stepperValueEventWithSender:" destination="Hg6-Pa-DJm" eventType="valueChanged" id="LLW-67-SOA"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iV5-AE-80n">
+                                <rect key="frame" x="184" y="245" width="7.5" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.014426055364310741" green="0.093261606991291046" blue="0.39344567060470581" alpha="0.8711536618098159" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="iV5-AE-80n" firstAttribute="top" secondItem="vYS-NR-Vbg" secondAttribute="bottom" constant="225" id="4Wy-L7-MIp"/>
+                            <constraint firstItem="iV5-AE-80n" firstAttribute="centerX" secondItem="q19-MP-Pag" secondAttribute="centerX" id="Grh-3i-hhN"/>
+                            <constraint firstItem="jwh-Qg-Y5r" firstAttribute="top" secondItem="iV5-AE-80n" secondAttribute="bottom" constant="25" id="PSs-yJ-DHs"/>
+                            <constraint firstItem="jwh-Qg-Y5r" firstAttribute="centerX" secondItem="q19-MP-Pag" secondAttribute="centerX" id="sQd-ZU-hBx"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HNa-A2-Pbf" appends="YES" id="Ur4-ci-2ah"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="speedLabel" destination="iV5-AE-80n" id="EWq-Mv-wAn"/>
+                        <outlet property="speedStepper" destination="jwh-Qg-Y5r" id="IIh-YI-owT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oy8-a1-fNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HNa-A2-Pbf">
+                    <connections>
+                        <action selector="done:" destination="Hg6-Pa-DJm" id="WUB-5d-zEw"/>
+                        <outlet property="delegate" destination="q19-MP-Pag" id="1t4-da-Boe"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2003" y="128"/>
+        </scene>
+        <!--Yoga Timer-->
+        <scene sceneID="AM7-ay-CZS">
+            <objects>
+                <navigationController title="Yoga Timer" automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="QY5-Qa-LnD" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="ic_navigate_before" backIndicatorTransitionMaskImage="ic_navigate_before" id="UEO-jh-mNV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Oge-bX-3Yr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kls-hK-VA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TimerStep" width="24" height="24"/>
+        <image name="ic_navigate_before" width="24" height="24"/>
+    </resources>
 </document>

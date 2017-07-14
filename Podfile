@@ -7,7 +7,6 @@ target 'YogaTimer' do
 
   # Pods for YogaTimer
   pod 'MaterialComponents'
-  pod 'MBCircularProgressBar'
   pod 'Atomic'
 
 

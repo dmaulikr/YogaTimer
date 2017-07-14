@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A21C4141F189BD1006ABEC5 /* TimerStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21C4131F189BD1006ABEC5 /* TimerStepViewController.swift */; };
+		5A21C4161F189DD7006ABEC5 /* speedSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21C4151F189DD7006ABEC5 /* speedSetProtocol.swift */; };
 		5AFFDB271F1398FA0089DBD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFDB261F1398FA0089DBD0 /* AppDelegate.swift */; };
 		5AFFDB291F1398FA0089DBD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFFDB281F1398FA0089DBD0 /* ViewController.swift */; };
 		5AFFDB2C1F1398FA0089DBD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFFDB2A1F1398FA0089DBD0 /* Main.storyboard */; settings = {ASSET_TAGS = (yogaFiller, ); }; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		105ACC48ED09A036178AC944 /* Pods-YogaTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaTimerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YogaTimerTests/Pods-YogaTimerTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A21C4131F189BD1006ABEC5 /* TimerStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerStepViewController.swift; sourceTree = "<group>"; };
+		5A21C4151F189DD7006ABEC5 /* speedSetProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = speedSetProtocol.swift; sourceTree = "<group>"; };
 		5AFFDB231F1398FA0089DBD0 /* YogaTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YogaTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFFDB261F1398FA0089DBD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AFFDB281F1398FA0089DBD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 			children = (
 				5AFFDB261F1398FA0089DBD0 /* AppDelegate.swift */,
 				5AFFDB281F1398FA0089DBD0 /* ViewController.swift */,
+				5A21C4151F189DD7006ABEC5 /* speedSetProtocol.swift */,
+				5A21C4131F189BD1006ABEC5 /* TimerStepViewController.swift */,
 				5AFFDB2A1F1398FA0089DBD0 /* Main.storyboard */,
 				5AFFDB2D1F1398FA0089DBD0 /* Assets.xcassets */,
 				5AFFDB2F1F1398FA0089DBD0 /* LaunchScreen.storyboard */,
@@ -452,8 +458,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A21C4161F189DD7006ABEC5 /* speedSetProtocol.swift in Sources */,
 				5AFFDB291F1398FA0089DBD0 /* ViewController.swift in Sources */,
 				5AFFDB271F1398FA0089DBD0 /* AppDelegate.swift in Sources */,
+				5A21C4141F189BD1006ABEC5 /* TimerStepViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
