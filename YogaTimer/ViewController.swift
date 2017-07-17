@@ -98,6 +98,7 @@ class ViewController: UIViewController, SpeedSetDelegate {
                 } else {
                     self.yogaFiller.stopAnimating()
                     self.timer?.invalidate()
+                    self.maxTimerValueLabel.text = 0.description
                     self.partialReset()
                 }
             })
@@ -122,7 +123,8 @@ class ViewController: UIViewController, SpeedSetDelegate {
     }
     
     func animateLoading() {
-        yogaFiller.progress = 1.0
+        yogaFiller.startAnimating()
+        yogaFiller.progress = 0.99
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
             // Put your code which should be executed with a delay here
             self.yogaFiller.progress = Float(self.currentTimerValue / self.maxCountValue)

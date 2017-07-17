@@ -291,20 +291,17 @@ PODS:
   - MaterialComponents/Themes (26.0.0)
   - MaterialComponents/Typography (26.0.0):
     - MaterialComponents/private/Application
-  - MBCircularProgressBar (0.3.5)
   - MDFTextAccessibility (1.2.0)
 
 DEPENDENCIES:
   - Atomic
   - MaterialComponents
-  - MBCircularProgressBar
 
 SPEC CHECKSUMS:
   Atomic: 6a65765cb7d197873633e2693ee612f036736689
   MaterialComponents: 5ca5a2d73c93a471add1d9b59db0a9b8d948bce3
-  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
 
-PODFILE CHECKSUM: cb6d88ee9104045392f5356cc26ca289d3f80edf
+PODFILE CHECKSUM: 19d321da305b8152e77778fc6152ec6d0fb51ee3
 
 COCOAPODS: 1.2.1
