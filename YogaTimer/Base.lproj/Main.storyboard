@@ -71,7 +71,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.086274509803921567" green="0.16078431372549018" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.13725490200000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.0" green="0.12941176470588234" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BTM-lR-voz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8xV-0P-ZKS"/>
@@ -142,7 +142,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.086274509803921567" green="0.16078431372549018" blue="0.27843137254901962" alpha="0.58820216641104295" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.13725490200000001" blue="0.2470588235" alpha="0.58999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="iV5-AE-80n" firstAttribute="top" secondItem="vYS-NR-Vbg" secondAttribute="bottom" constant="225" id="4Wy-L7-MIp"/>
