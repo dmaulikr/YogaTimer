@@ -66,7 +66,6 @@ class ViewController: UIViewController, SpeedSetDelegate {
     }
     
     func reset () {
-        print("Reset clicked")
         timer?.invalidate()
         currentTimerValue = 0
         maxCountValue = 0
@@ -83,7 +82,6 @@ class ViewController: UIViewController, SpeedSetDelegate {
     }
     
     @IBAction func start(_ sender: UITapGestureRecognizer) {
-        print("Start clicked")
         yogaFiller.startAnimating()
         yogaFiller.progress = Float(currentTimerValue / self.maxCountValue)
         if (!timerRunningState.swap(newValue: true)) {
